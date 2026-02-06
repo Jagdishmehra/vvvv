@@ -291,6 +291,8 @@ export default function App() {
           {/* NO */}
           <motion.button
             onMouseEnter={moveNoButton}
+            onPointerDown={moveNoButton}
+            onTouchStart={moveNoButton}
             animate={{ left: noPosition.x, top: noPosition.y }}
             transition={{ type: "spring", stiffness: 250, damping: 12 }}
             style={{ position: "fixed" }}
