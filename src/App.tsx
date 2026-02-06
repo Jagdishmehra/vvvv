@@ -203,7 +203,7 @@ export default function App() {
 
           <p className="text-lg text-gray-700">
             Like you and me, some things are just meant to be.
-            <br />Mjaaa ayegaaa baby 💕
+            <br />Mjaaa ayegaaa baby 💕 for reply of yes check mail.💘
           </p>
 
           <div
