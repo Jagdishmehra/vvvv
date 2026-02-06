@@ -10,20 +10,20 @@ export default function App() {
   const [hearts, setHearts] = useState<number[]>([]);
   const [noLabel, setNoLabel] = useState("No 😢");
 
-  const [allowed, setAllowed] = useState(false);
   const [musicPlayed, setMusicPlayed] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const musicStarting = useRef(false);
   const musicPlayedRef = useRef(false);
 
-  // // 🔐 Secret link check
+  // 🔐 Secret link check
   // useEffect(() => {
   //   const params = new URLSearchParams(window.location.search);
   //   if (params.get("love") === "forever") setAllowed(true);
   // }, []);
 
   // 🎞 Tenor script
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://tenor.com/embed.js";
@@ -58,7 +58,7 @@ export default function App() {
   const startMusic = useCallback(() => {
     if (musicPlayedRef.current || musicStarting.current) return;
     musicStarting.current = true;
-
+  if (musicPlayed) return;
     const audio = audioRef.current;
     if (!audio) {
       musicStarting.current = false;
@@ -107,10 +107,10 @@ export default function App() {
           subject: "Oh My Love.",
           message: "She said YES ❤️",
           time,
-          to_email: "sushmasingh92k@gmail.com",
+          to_email: "sushmasingh923k@gmail.com",
           to_name: "Sushma",
           from_name: "Valentine App",
-          reply_to: "sushmasingh92k@gmail.com",
+          reply_to: "sushmasingh923k@gmail.com",
           screenshot: "",
         },
         "YdwOy9l0MbjAiMn8L"
@@ -150,7 +150,6 @@ export default function App() {
   };
 
   // 🔐 Block page if wrong link
-  if (!allowed) return null;
 
   // ================= ACCEPTED SCREEN =================
   if (accepted) {
