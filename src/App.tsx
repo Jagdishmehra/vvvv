@@ -107,10 +107,10 @@ export default function App() {
           subject: "Oh My Love.",
           message: "She said YES ❤️",
           time,
-          to_email: "sushmasingh923k@gmail.com",
+          to_email: "sushmasingh92k@gmail.com",
           to_name: "Sushma",
           from_name: "Valentine App",
-          reply_to: "sushmasingh923k@gmail.com",
+          reply_to: "sushmasingh92k@gmail.com",
           screenshot: "",
         },
         "YdwOy9l0MbjAiMn8L"
